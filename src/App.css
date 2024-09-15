@@ -47,6 +47,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 7px solid var(--firstColor);
 }
 
 .divisor {
@@ -55,4 +56,22 @@ h1 {
     background-color: var(--firstColor);
     height: 150px;
     margin: 0 10px 0 10px;
+}
+
+@media screen and (max-width: 895px) {
+    #text_intro {
+        margin: 25%;
+        width: 90%;
+    }
+
+    #description {
+        font-size: 3.2cqmax;
+    }
+    
+    
+    #break_infos {
+        flex-direction: column;
+        height: min-content;
+        padding: 10px;
+    }
 }
