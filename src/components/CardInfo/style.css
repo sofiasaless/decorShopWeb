@@ -1,0 +1,47 @@
+#card-info div {
+    background-color: var(--secondColor);
+    border: none;
+    /* border: 1px solid red; */
+}
+
+#card-info h5 {
+    color: var(--firstColor);
+    font-family: var(--firstFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#card-info p {
+    color: white;
+    font-family: var(--firstFont);
+    font-size: 20px;
+}
+
+img {
+    text-align: center;
+    width: 130px;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+ 
+}
+
+@media screen and (max-width: 895px) {
+    #text_intro {
+        height: 100%;
+    }
+
+    #break_infos {
+        flex-direction: column;
+        height: min-content;
+        padding: 10px;
+    }
+
+    .divisor {
+        width: 100%;
+        height: 3px;
+        margin: 20px 0 20px 0;
+    }
+
+}
