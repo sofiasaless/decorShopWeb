@@ -1,11 +1,11 @@
-import './App.css'
+import './App.css';
+import Header from './components/Header';
 
 function App() {
 
   return (
     <>
-      <h1>Decorações Escolares</h1>
-      <h4>Em breve...</h4>
+      <Header/>
     </>
   )
 }
