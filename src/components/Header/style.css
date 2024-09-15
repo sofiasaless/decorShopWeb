@@ -1,0 +1,37 @@
+#header {
+    height: 78px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--secondColor);
+    text-align: center;
+}
+
+.nav-link {
+    padding: 17px 17px 15px 17px;
+    font-size: 20px;
+    color: var(--firstColor);
+    font-family: var(--firstFont);
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--firstColor);
+}
+
+.nav-link img {
+    text-align: center;
+    width: 110px;
+    height: auto;
+    margin: 0 auto; 
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#logo {
+    padding: 0;
+}
