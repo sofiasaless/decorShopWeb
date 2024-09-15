@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 * {
   padding: 0;
@@ -11,7 +12,7 @@
   font-family: "Neucha", cursive;
   
   --firstFont: "Neucha", cursive;
-  --secondFont: "Birthstone Bounce", cursive;
+  --secondFont: "Kaushan Script", cursive;
 
   --firstColor: #f28732;
   --secondColor: #1b1c22;

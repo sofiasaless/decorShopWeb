@@ -1,0 +1,36 @@
+#home_section {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 78px);
+    padding: 0;
+    margin: 0;
+    background-image: url("../public/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-position-y: center;
+    align-items: center;
+}
+
+#text_intro {
+    width: 70%;
+    /* border: 1px solid red; */
+    text-align: center;
+    font-family: var(--secondFont);
+}
+
+h1 span {
+    display: block;
+    font-size: 12cqmax;
+}
+
+h1 {
+    color: var(--secondColor);
+    line-height: 0.9;
+}
+
+p {
+    font-size: 2cqmax;
+    line-height: 1.2;
+    color: var(--firstColor);
+}
