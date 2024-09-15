@@ -12,6 +12,7 @@
     color: var(--firstColor);
     font-family: var(--firstFont);
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .nav-link:hover {
