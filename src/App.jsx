@@ -3,6 +3,12 @@ import Header from './components/Header';
 import CardInfo from './components/CardInfo';
 import arqPd from "../public/img/arquivospdf.png";
 import decor from "../public/img/decoracoes.png";
+import CardProduct from './components/CardProduct';
+
+import prodTemplate from "../public/img/product-template/bem-vindosCompleto.png";
+import prodTemplate2 from "../public/img/product-template/calendario.png";
+import prodTemplate3 from "../public/img/product-template/lagarga-vogais.png";
+import prodTemplate4 from "../public/img/product-template/numeros.png";
 
 function App() {
 
@@ -33,6 +39,33 @@ function App() {
           />
 
         </div>
+
+      </section>
+
+      <section id='product_section' className='pt-5'>
+
+        <div className="embleme">
+          <div className="breaker_text"></div>
+          <h2><span>Produtos</span><span>Decorativos</span></h2>
+          <div className="breaker_text"></div>
+        </div>
+
+        <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1">
+          
+          <CardProduct title={"bem-vindo"} price={"50"} img={ prodTemplate }/>
+          
+          <CardProduct title={"calendário"} price={"45"} img={ prodTemplate2 }/>
+
+          <CardProduct title={"sentopéia vogais"} price={"50"} img={ prodTemplate3 } />
+
+          <CardProduct title={"alfabeto"} price={"35"} img={ prodTemplate4 } />
+
+        </div>
+
+        <div className='container mt-5 d-flex justify-content-center align-items-center'>
+          <button id='btn-seeallproduct' className='btn btn-info rounded-5'>ver todos produtos</button>
+        </div>
+
 
       </section>
     </>

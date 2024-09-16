@@ -14,7 +14,7 @@
     font-size: 20px;
 }
 
-.btn {
+#bt-seemore {
     width: 70%;
     background-color: var(--firstColor);
     border: none;
@@ -22,9 +22,10 @@
     font-weight: bold;
     font-size: 18px;
     border-radius: 20px;
+    border-bottom: 4px solid var(--firstColorDark);
 }
 
-.btn:hover {
+#bt-seemore:hover {
     color: black;
-    background-color: var(--firstColor);
+    background-color: var(--firstColorDark);
 }

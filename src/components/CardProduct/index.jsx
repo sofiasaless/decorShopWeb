@@ -12,7 +12,7 @@ export default function CardProduct( { title, price, img } ) {
                             R${ price }
                         </p>
 
-                        <button className="btn btn-dark">ver mais</button>
+                        <button id='bt-seemore' className="btn btn-dark">ver mais</button>
 
                     </div>
                 </div>
