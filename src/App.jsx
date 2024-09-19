@@ -2,8 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import CardInfo from './components/CardInfo';
 import arqPd from "../public/img/arquivospdf.png";
-import decor from "../public/img/decoracoes.png";
 import CardProduct from './components/CardProduct';
+import BreakInfo from './components/BreakInfo';
 
 import prodTemplate from "../public/img/product-template/bem-vindosCompleto.png";
 import prodTemplate2 from "../public/img/product-template/calendario.png";
@@ -22,23 +22,21 @@ function App() {
           <p id='description'>Transforme sua sala de aula com estilo, conheça a diversidade de belas decorações e efeites infantis produzidos com material EVA.</p>
         </div>
 
-        <div id='break_infos' className='d-flex align-items-center justify-content-center'>
+        <BreakInfo>
+          <CardInfo 
+              title={"Arquivos PDF"} 
+              description={"Uma diversidade de arquivos PDF de atividades de todos os gêneros para você trabalhar em sala de aula."} 
+              img={arqPd} 
+          />
+
+          <div className='divisor rounded-3 mx-3'></div>
 
           <CardInfo 
             title={"Arquivos PDF"} 
             description={"Uma diversidade de arquivos PDF de atividades de todos os gêneros para você trabalhar em sala de aula."} 
             img={arqPd} 
           />
-
-          <div className='divisor rounded-3 mx-3'></div>
-
-          <CardInfo 
-            title={"Enfeites de sala"} 
-            description={"Decorações educativas para enfeitar sua sala de aula e trabalhar com as crianças."} 
-            img={decor} 
-          />
-
-        </div>
+        </BreakInfo>
 
       </section>
 
