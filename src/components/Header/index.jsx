@@ -4,7 +4,7 @@ import logo from "../../../public/img/logo.png";
 export default function Header () {
     return (
         <>
-            <div id='header' className="nav justify-content-center">
+            <div id='header' className="nav justify-content-center ">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
@@ -14,7 +14,7 @@ export default function Header () {
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="#" id='logo'><img src={logo} alt="" /></a>
+                        <a className="nav-link p-0" href="#" id='logo'><img src={logo} alt="" /></a>
                     </li>
 
                     <li class="nav-item">

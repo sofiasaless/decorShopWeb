@@ -15,14 +15,14 @@ function App() {
   return (
     <>
       <Header/>
-      <section id='home_section'>
+      <section id='home_section' className='d-flex flex-column p-0 m-0 align-items-center'>
         
-        <div id='text_intro' className='container fluid'>
-          <h1><span>Acervo</span><span>E.V.A</span></h1>
+        <div id='text_intro' className='container fluid text-center d-flex flex-column justify-content-center'>
+          <h1><span className='d-block'>Acervo</span><span className='d-block'>E.V.A</span></h1>
           <p id='description'>Transforme sua sala de aula com estilo, conheça a diversidade de belas decorações e efeites infantis produzidos com material EVA.</p>
         </div>
 
-        <div id='break_infos'>
+        <div id='break_infos' className='d-flex align-items-center justify-content-center'>
 
           <CardInfo 
             title={"Arquivos PDF"} 
@@ -30,7 +30,7 @@ function App() {
             img={arqPd} 
           />
 
-          <div className='divisor'></div>
+          <div className='divisor rounded-3 mx-3'></div>
 
           <CardInfo 
             title={"Enfeites de sala"} 
@@ -42,15 +42,15 @@ function App() {
 
       </section>
 
-      <section id='product_section' className='pt-5'>
+      <section id='product_section' className='p-5 d-flex flex-column'>
 
-        <div className="embleme">
+        <div className="embleme d-flex flex-row justify-content-space-evenly">
           <div className="breaker_text"></div>
-          <h2><span>Produtos</span><span>Decorativos</span></h2>
+          <h2 className='mx-3 text-uppercase fw-bold'><span className='d-block text-center'>Produtos</span><span className='d-block text-center'>Decorativos</span></h2>
           <div className="breaker_text"></div>
         </div>
 
-        <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1">
+        <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 d-flex align-items-center justify-content-center">
           
           <CardProduct title={"bem-vindo"} price={"50"} img={ prodTemplate }/>
           
@@ -63,7 +63,7 @@ function App() {
         </div>
 
         <div className='container mt-5 d-flex justify-content-center align-items-center'>
-          <button id='btn-seeallproduct' className='btn btn-info rounded-5'>ver todos produtos</button>
+          <button id='btn-seeallproduct' className='btn btn-info rounded-5 fw-bold text-uppercase'>ver todos produtos</button>
         </div>
 
 

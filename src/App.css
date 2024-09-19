@@ -1,31 +1,21 @@
 #home_section {
-    display: flex;
-    flex-direction: column;
     width: 100vw;
     height: calc(100vh - 78px);
-    padding: 0;
-    margin: 0;
     background-image: url("../public/img/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     background-position-y: center;
-    align-items: center;
 }
 
 #text_intro {
-    display: flex;
-    flex-direction: column;
     width: 70%;
     height: 70%;
     /* border: 1px solid red; */
-    text-align: center;
-    justify-content: center;
     font-family: var(--secondFont);
 }
 
 h1 span {
-    display: block;
     font-size: 12cqmax;
     line-height: 0.98;
 }
@@ -44,18 +34,13 @@ h1 {
     width: 100%;
     height: 30%;
     background-color: var(--secondColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 7px solid var(--firstColor);
 }
 
 .divisor {
     width: 3px;
-    border-radius: 10px;
     background-color: var(--firstColor);
     height: 150px;
-    margin: 0 10px 0 10px;
 }
 
 @media screen and (max-width: 895px) {
@@ -81,17 +66,7 @@ h1 {
 
 #product_section {
     background-color: var(--thirdColor);
-    padding: 5%;
     width: 100%;
-    height: calc(100vh + auto);
-    display: flex;
-    flex-direction: column;
-}
-
-.embleme {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .breaker_text {
@@ -101,31 +76,15 @@ h1 {
     background-color: var(--firstColor);
 }
 
-h2 {
-    margin: 0 10px 0 10px;
-}
-
 h2 span {
-    text-align: center;
-    display: block;
     line-height: 0.98;
     font-family: var(--firstFont);
-    text-transform: uppercase;
-    font-weight: bold;
     color: var(--secondColor);
-}
-
-#grid-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #btn-seeallproduct {
     width: 50%;
     font-family: var(--firstFont);
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 23px;
     color: var(--firstColor);
     background-color: var(--secondColor);
