@@ -1,9 +1,12 @@
 import './App.css';
 import Header from './components/Header';
 import CardInfo from './components/CardInfo';
-import arqPd from "../public/img/arquivospdf.png";
 import CardProduct from './components/CardProduct';
 import BreakInfo from './components/BreakInfo';
+
+import arqPd from "../public/img/arquivospdf.png";
+import decor from "../public/img/decoracoes.png";
+import how from "../public/img/howworks.png";
 
 import prodTemplate from "../public/img/product-template/bem-vindosCompleto.png";
 import prodTemplate2 from "../public/img/product-template/calendario.png";
@@ -32,9 +35,9 @@ function App() {
           <div className='divisor rounded-3 mx-3'></div>
 
           <CardInfo 
-            title={"Arquivos PDF"} 
-            description={"Uma diversidade de arquivos PDF de atividades de todos os gêneros para você trabalhar em sala de aula."} 
-            img={arqPd} 
+            title={"Enfeites de sala"} 
+            description={"Decorações educativas para enfeitar sua sala de aula e trabalhar com as crianças."} 
+            img={decor} 
           />
         </BreakInfo>
 
@@ -61,11 +64,18 @@ function App() {
         </div>
 
         <div className='container mt-5 d-flex justify-content-center align-items-center'>
-          <button id='btn-seeallproduct' className='btn btn-info rounded-5 fw-bold text-uppercase'>ver todos produtos</button>
+          <button id='btn-seeallproduct' className='btn btn-info rounded-5 fw-bold text-uppercase p-3'>ver todos produtos</button>
         </div>
 
-
       </section>
+
+      <BreakInfo>
+       <CardInfo 
+            title={"Como são feitas as decorações?"} 
+            description={"Feitas de papel E.V.A e cola para isopor, o cuidado no produção proporciona durabilidade e firmeza."} 
+            img={ how } 
+          />
+      </BreakInfo>
     </>
   )
 }

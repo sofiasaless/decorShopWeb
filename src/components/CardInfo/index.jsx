@@ -11,7 +11,7 @@ export default function CardInfo( { title, description, img } ){
                 </div>
                 <div className='col-md-8'>
                   <div className='card-body'>
-                    <h5 className='card-title text-start text-uppercase fw-bold'>{ title }</h5>
+                    <h5 className='card-title text-start text-uppercase'>{ title }</h5>
                     <p className='card-text text-start'>{ description }</p>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   padding: 0;
@@ -9,9 +10,9 @@
 }
 
 :root {
-  font-family: "Neucha", cursive;
+  font-family: "Grandstander", cursive;
   
-  --firstFont: "Neucha", cursive;
+  --firstFont: "Grandstander", cursive;
   --secondFont: "Kaushan Script", cursive;
 
   --firstColor: #f28732;
