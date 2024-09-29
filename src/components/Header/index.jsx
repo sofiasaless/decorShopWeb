@@ -7,7 +7,7 @@ export default function Header () {
             <div id='header' className="nav justify-content-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+                        <a class="nav-link active" aria-current="page" href="#">Entrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Produtos</a>
@@ -18,7 +18,7 @@ export default function Header () {
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Materiais</a>
+                        <a class="nav-link" href="#">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>
