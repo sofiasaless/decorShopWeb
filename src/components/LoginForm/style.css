@@ -1,0 +1,31 @@
+form {
+    background-color: var(--secondColor);
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    color: var(--firstColor);
+    font-family: var(--firstFont);
+}
+
+.mb-3 {
+    font-family: var(--firstFont);
+    font-weight: bolder;
+}
+
+#btn {
+    font-family: var(--firstFont);    
+    width: 50%;
+    background-color: var(--firstColor);
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 4px solid var(--firstColorDark);
+}
+
+#btn:hover {
+    color: black;
+    background-color: var(--firstColorDark);
+}

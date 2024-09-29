@@ -1,5 +1,6 @@
 import './style.css';
 import logo from "../../../public/img/logo.png";
+import { Link } from 'react-router-dom';
 
 export default function Header () {
     return (
@@ -7,21 +8,21 @@ export default function Header () {
             <div id='header' className="nav justify-content-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Entrar</a>
+                        <Link to={"/entrar"} class="nav-link active" aria-current="page">Entrar</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
+                        <Link class="nav-link">Produtos</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="#" id='logo'><img src={logo} alt="" /></a>
+                        <Link to={"/"} className="nav-link" id='logo'><img src={logo} alt="" /></Link>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <Link class="nav-link">Sobre</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <Link class="nav-link">Contato</Link>
                     </li>
                 </ul>
             </div>
