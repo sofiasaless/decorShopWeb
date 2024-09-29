@@ -8,8 +8,8 @@ export default function LoginForm() {
                 <h2 className="text-break mb-4">Faça login para continuar</h2>
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label text-uppercase">Nome de usuário</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <label for="exampleInputUsername" class="form-label text-uppercase">Nome de usuário</label>
+                    <input type="email" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp"/>
                 </div>
 
                 <div class="mb-3">
