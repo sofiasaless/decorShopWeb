@@ -5,12 +5,26 @@ import arqPd from "../public/img/arquivospdf.png";
 import decor from "../public/img/decoracoes.png";
 import CardProduct from './components/CardProduct';
 
-import prodTemplate from "../public/img/product-template/bem-vindosCompleto.png";
-import prodTemplate2 from "../public/img/product-template/calendario.png";
-import prodTemplate3 from "../public/img/product-template/lagarga-vogais.png";
-import prodTemplate4 from "../public/img/product-template/numeros.png";
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+
+  var productData = [];
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/decor/list')
+    .then((resp) => {
+      for (let i = 0; i < 4; i++) {
+        productData[i] = resp.data[i];
+      }
+      setData(productData);
+    })
+    .catch(err => console.log('erro: ' + err));
+  })
+
 
   return (
     <>
@@ -52,18 +66,20 @@ function App() {
 
         <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1">
           
-          <CardProduct title={"bem-vindo"} price={"50"} img={ prodTemplate }/>
-          
-          <CardProduct title={"calendário"} price={"45"} img={ prodTemplate2 }/>
-
-          <CardProduct title={"sentopéia vogais"} price={"50"} img={ prodTemplate3 } />
-
-          <CardProduct title={"alfabeto"} price={"35"} img={ prodTemplate4 } />
+          {
+            data.map((prod) => (
+              <CardProduct 
+                title={prod.name}
+                price={prod.price}
+                img={prod.image}
+              />
+            ))
+          }
 
         </div>
 
         <div className='container mt-5 d-flex justify-content-center align-items-center'>
-          <button id='btn-seeallproduct' className='btn btn-info rounded-5'>ver todos produtos</button>
+          <Link to={"/produtos"} id='btn-seeallproduct' className='btn btn-info rounded-5'>ver todos produtos</Link>
         </div>
 
 
