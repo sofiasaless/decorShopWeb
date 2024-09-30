@@ -1,0 +1,14 @@
+section {
+    background-color: var(--thirdColor);
+    padding: 5%;
+    width: 100%;
+    height: calc(100vh + auto);
+    display: flex;
+    flex-direction: column;
+}
+
+.embleme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
