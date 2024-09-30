@@ -1,13 +1,10 @@
 .card-body {
-    text-align: center;
     font-family: var(--firstFont);
     background-color: #cacaca;
 }
 
 .card-body h5 {
-    text-transform: uppercase;
     font-size: 23px;
-    font-weight: bold;
 }
 
 .card-body p {
@@ -19,9 +16,7 @@
     background-color: var(--firstColor);
     border: none;
     color: black;
-    font-weight: bold;
     font-size: 18px;
-    border-radius: 20px;
     border-bottom: 4px solid var(--firstColorDark);
 }
 

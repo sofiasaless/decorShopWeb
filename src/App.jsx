@@ -29,14 +29,14 @@ function App() {
   return (
     <>
       <Header/>
-      <section id='home_section'>
+      <section id='home_section' className='d-flex flex-column align-items-center'>
         
-        <div id='text_intro' className='container fluid'>
+        <div id='text_intro' className='container fluid d-flex flex-column text-center justify-content-center'>
           <h1><span>Acervo</span><span>E.V.A</span></h1>
           <p id='description'>Transforme sua sala de aula com estilo, conheça a diversidade de belas decorações e efeites infantis produzidos com material EVA.</p>
         </div>
 
-        <div id='break_infos'>
+        <div id='break_infos' className='d-flex justify-content-center align-items-center'>
 
           <CardInfo 
             title={"Arquivos PDF"} 
@@ -56,15 +56,15 @@ function App() {
 
       </section>
 
-      <section id='product_section' className='pt-5'>
+      <section id='product_section' className='pt-5 d-flex flex-column'>
 
-        <div className="embleme">
+        <div className="embleme d-flex flex-row justify-content-space-evenly">
           <div className="breaker_text"></div>
-          <h2><span>Produtos</span><span>Decorativos</span></h2>
+          <h2><span className='d-block text-center text-uppercase fw-bold'>Produtos</span><span className='d-block text-center text-uppercase fw-bold'>Decorativos</span></h2>
           <div className="breaker_text"></div>
         </div>
 
-        <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1">
+        <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 d-flex align-items-center justify-content-center">
           
           {
             data.map((prod) => (
@@ -79,7 +79,7 @@ function App() {
         </div>
 
         <div className='container mt-5 d-flex justify-content-center align-items-center'>
-          <Link to={"/produtos"} id='btn-seeallproduct' className='btn btn-info rounded-5'>ver todos produtos</Link>
+          <Link to={"/produtos"} id='btn-seeallproduct' className='btn btn-info rounded-5 fw-bold text-uppercase'>ver todos produtos</Link>
         </div>
 
 

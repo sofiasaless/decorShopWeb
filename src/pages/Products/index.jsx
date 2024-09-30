@@ -7,9 +7,9 @@ export default function Products () {
             <Header/>
             <section className="d-flex">
             
-            <div className="embleme">
+            <div className="embleme d-flex flex-row justify-content-space-evenly">
                 <div className="breaker_text"></div>
-                <h2><span>Produtos</span><span>Disponíveis</span></h2>
+                <h2><span className='d-block text-center text-uppercase fw-bold'>Produtos</span><span className='d-block text-center text-uppercase fw-bold'>Disponíveis</span></h2>
                 <div className="breaker_text"></div>
             </div>
 
