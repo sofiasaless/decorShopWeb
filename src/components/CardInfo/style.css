@@ -7,8 +7,6 @@
 #card-info h5 {
     color: var(--firstColor);
     font-family: var(--firstFont);
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 25px;
 }
 
@@ -19,7 +17,6 @@
 }
 
 img {
-    text-align: center;
     width: 130px;
     height: auto;
     margin: 0 auto;

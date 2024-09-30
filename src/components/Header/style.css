@@ -1,9 +1,6 @@
 #header {
     height: 78px;
-    align-items: center;
-    text-align: center;
     background-color: var(--secondColor);
-    text-align: center;
 }
 
 .nav-link {
@@ -11,8 +8,6 @@
     font-size: 20px;
     color: var(--firstColor);
     font-family: var(--firstFont);
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -24,13 +19,6 @@
     width: 110px;
     height: auto;
     margin: 0 auto; 
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
 }
 
 #logo {

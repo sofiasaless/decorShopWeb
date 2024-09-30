@@ -5,24 +5,24 @@ import { Link } from 'react-router-dom';
 export default function Header () {
     return (
         <>
-            <div id='header' className="nav justify-content-center">
+            <div id='header' className="nav justify-content-center align-items-center text-center">
                 <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <Link to={"/entrar"} class="nav-link active" aria-current="page">Entrar</Link>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <Link to={"/entrar"} class="nav-link text-uppercase fw-bold" aria-current="page">Entrar</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link to={"/produtos"} class="nav-link">Produtos</Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link to={"/"} className="nav-link" id='logo'><img src={logo} alt="" /></Link>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <Link to={"/produtos"} class="nav-link text-uppercase fw-bold">Produtos</Link>
                     </li>
 
-                    <li class="nav-item">
-                        <Link class="nav-link">Sobre</Link>
+                    <li className="nav-item d-flex align-items-center justify-content-center text-center">
+                        <Link to={"/"} className="nav-link text-uppercase fw-bold" id='logo'><img src={logo} alt="" /></Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link">Contato</Link>
+
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <Link class="nav-link text-uppercase fw-bold">Sobre</Link>
+                    </li>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <Link class="nav-link text-uppercase fw-bold">Contato</Link>
                     </li>
                 </ul>
             </div>
