@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 export default function Header () {
     return (
         <>
-            <div id='header' className="nav justify-content-center align-items-center text-center">
-                <ul class="nav justify-content-center">
+            <div id='header' className="nav sticky-top justify-content-center align-items-center text-center">
+                <ul className="nav justify-content-center">
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
                         <Link to={"/entrar"} class="nav-link text-uppercase fw-bold" aria-current="page">Entrar</Link>
                     </li>
@@ -15,14 +15,14 @@ export default function Header () {
                     </li>
 
                     <li className="nav-item d-flex align-items-center justify-content-center text-center">
-                        <Link to={"/"} className="nav-link text-uppercase fw-bold" id='logo'><img src={logo} alt="" /></Link>
+                        <Link to={"/"} className="nav-link text-uppercase fw-bold" id='logo'><img src={logo} alt="Logo" /></Link>
                     </li>
 
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                        <Link class="nav-link text-uppercase fw-bold">Sobre</Link>
+                        <Link to={"/"} class="nav-link text-uppercase fw-bold">Sobre</Link>
                     </li>
                     <li class="nav-item d-flex align-items-center justify-content-center text-center">
-                        <Link class="nav-link text-uppercase fw-bold">Contato</Link>
+                        <Link  to={"/"} class="nav-link text-uppercase fw-bold">Contato</Link>
                     </li>
                 </ul>
             </div>
