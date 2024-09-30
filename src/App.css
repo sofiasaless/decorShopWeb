@@ -98,6 +98,6 @@ h2 span {
     font-size: 23px;
     color: var(--firstColor);
     background-color: var(--secondColor);
-    padding: 14px 8px 8px 8px;
+    padding: 8px 8px 8px 8px;
     border: 0;
 }

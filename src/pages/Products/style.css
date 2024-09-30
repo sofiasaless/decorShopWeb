@@ -1,14 +1,30 @@
-section {
+#initial-section {
+    height: auto;
+}
+
+#break {
+    width: 100%;
+    margin: auto;
+    padding: 2%;
+    border-bottom: 5px solid var(--firstColor);
+    border-top: 5px solid var(--firstColor);
+    font-family: var(--firstFont);
+}
+
+#break span {
+    font-size: 25px;
+    color: #d1326b;
+}
+
+#break p {
+    color: var(--secondColor);
+    font-size: larger;
+    margin: 0 10% 0 10%;
+}
+
+#prod-section {
     background-color: var(--thirdColor);
     padding: 5%;
     width: 100%;
-    height: calc(100vh + auto);
-    display: flex;
-    flex-direction: column;
-}
-
-.embleme {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    height: 100%;
 }
