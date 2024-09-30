@@ -13,6 +13,7 @@ function App() {
 
   var productData = [];
   const [data, setData] = useState([])
+  const [ resp, setResp ] = useState(false);
 
   useEffect(() => {
     axios.get('http://localhost:8080/decor/list')
@@ -21,8 +22,12 @@ function App() {
         productData[i] = resp.data[i];
       }
       setData(productData);
+      setResp(true)
     })
-    .catch(err => console.log('erro: ' + err));
+    .catch((err) => {
+      console.log('erro: ' + err)
+      setResp(false)
+    })
   })
 
 
@@ -67,6 +72,7 @@ function App() {
         <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 d-flex align-items-center justify-content-center">
           
           {
+            resp ?
             data.map((prod) => (
               <CardProduct 
                 title={prod.name}
@@ -74,6 +80,12 @@ function App() {
                 img={prod.image}
               />
             ))
+            :
+            <div class="text-center mt-5">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
           }
 
         </div>

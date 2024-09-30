@@ -7,13 +7,18 @@ import CardProduct from "../../components/CardProduct";
 export default function Products () {
     
     const [ products, setProducts ] = useState([]);
+    const [ resp, setResp ] = useState(false)
 
     useEffect(() => {
         axios.get("http://localhost:8080/decor/list")
         .then((resp) => {
             setProducts(resp.data)
+            setResp(true)
         })
-        .catch(err => console.log(err));
+        .catch((err) => {
+            console.log(err)
+            setResp(false)
+        })
     })
     
     return (
@@ -40,7 +45,8 @@ export default function Products () {
 
                 <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 mb-1 align-items-center justify-content-center">
                     
-                    {
+                    {   
+                        resp ?
                         products.map((p) => (
                             <>
                                 <CardProduct 
@@ -50,6 +56,12 @@ export default function Products () {
                                 />
                             </>
                         ))
+                        :
+                        <div class="text-center mt-5">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        </div>
                     }
 
                 </div>

@@ -4,7 +4,6 @@
 }
 
 .nav-link {
-    padding: 17px 17px 15px 17px;
     font-size: 20px;
     color: var(--firstColor);
     font-family: var(--firstFont);
@@ -23,4 +22,12 @@
 
 #logo {
     padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-link {
+        font-size: 15px;
+        padding: 8px;
+    }
+
 }
