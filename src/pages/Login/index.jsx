@@ -22,7 +22,7 @@ export default function Login () {
         .then((resp) => {
             localStorage.setItem('token', resp.data.token)
             setResponse(true)
-            return navigate("/");
+            return navigate("/admin");
         })
         .catch((err) => {
             setResponse(false)
