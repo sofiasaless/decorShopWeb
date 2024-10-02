@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import App from "./App";
 import ProtectedPage from "./pages/ProtectedPage";
 import Administrator from "./pages/Administrator";
+import AdminBuild from "./pages/AdminBuild";
 
 export default function AppRoutes () {
     return (
@@ -21,6 +22,7 @@ export default function AppRoutes () {
                     }
                 >
                 </Route>
+                <Route path="/page" element = {<AdminBuild/>}></Route>
             </Routes>
         </BrowserRouter>
     );
