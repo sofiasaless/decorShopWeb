@@ -6,6 +6,9 @@ import ProtectedPage from "./pages/ProtectedPage";
 import Administrator from "./pages/Administrator";
 // import AdminBuild from "./pages/AdminBuild";
 import NewProducts from "./pages/NewProducts";
+import EditProducts from "./pages/EditProducts";
+import Usuarios from "./pages/Usuarios";
+import Register from "./pages/Register";
 
 export default function AppRoutes () {
     return (
@@ -13,6 +16,7 @@ export default function AppRoutes () {
             <Routes>
                 <Route path="/" element = { <App/> } ></Route>
                 <Route path="/entrar" element = { <Login/> } ></Route>
+                <Route path="/cadastro" element = { <Register/> } ></Route>
                 <Route path="/produtos" element = { <Products/> } ></Route>
                 <Route 
                     path="/admin" 
@@ -33,8 +37,28 @@ export default function AppRoutes () {
                         </ProtectedPage>
                     }
                 >
-
                 </Route>
+                <Route
+                    path="/admin/editarProdutos"
+                    element= {
+                        <ProtectedPage>
+                            <Administrator>
+                                <EditProducts/>
+                            </Administrator>
+                        </ProtectedPage>
+                    }
+                ></Route>
+                <Route
+                    path="/admin/usuarios"
+                    element= {
+                        <ProtectedPage>
+                            <Administrator>
+                                <Usuarios/>
+                            </Administrator>
+                        </ProtectedPage>
+                    }
+                ></Route>
+
 
                 {/* <Route path="/page" element = {<AdminBuild/>}></Route> */}
 

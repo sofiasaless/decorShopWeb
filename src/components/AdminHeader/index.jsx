@@ -33,25 +33,19 @@ export default function AdminHeader () {
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <Link to={"/admin/editarProdutos"} className="nav-link" href="#">
                                     <i class="bi bi-pencil-fill m-3"></i>
                                     Visualizar e editar
-                                </a>
+                                </Link>
                             </li>
                             
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <Link to={"/admin/usuarios"} className="nav-link" href="#">
                                     <i class="bi bi-people-fill m-3"></i>
                                     Usuários
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    <i class="bi bi-person-lines-fill m-3"></i>
-                                    Contatos
-                                </a>
-                            </li>
 
                             <li className="nav-item">
                                 <Link 
