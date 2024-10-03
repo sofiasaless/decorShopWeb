@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function AdminHeader () {
     return (
         <>
-            <nav id="nav-sec" className="navbar navbar-expand-lg navbar-light">
+            <nav id="nav-sec" className="navbar navbar-expand-lg navbar-light sticky-top">
                 <div className="container-fluid">
                     <button 
                         className="navbar-toggler" 
@@ -26,10 +26,10 @@ export default function AdminHeader () {
                             </li>
                             
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <Link to={"/admin/novoProduto"} className="nav-link" href="#">
                                 <i class="bi bi-plus-square-fill m-3"></i>
                                     Novos produtos    
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
@@ -45,11 +45,26 @@ export default function AdminHeader () {
                                     Usuários
                                 </a>
                             </li>
+
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
                                     <i class="bi bi-person-lines-fill m-3"></i>
                                     Contatos
                                 </a>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link 
+                                    className="nav-link" href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        localStorage.removeItem('token');
+                                        window.location.reload();
+                                    }}
+                                >
+                                    <i class="bi bi-box-arrow-left m-3"></i>
+                                    Fazer Logout
+                                </Link>
                             </li>
                         </ul>
                     </div>
