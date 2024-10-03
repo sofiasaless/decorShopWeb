@@ -1,0 +1,34 @@
+@media screen and (min-width: 996px) {
+    #admin-section {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+}
+
+#admin-section {
+    width: 100%;
+    font-family: var(--firstFont);
+    height: 100%;
+}
+
+#admin-section h1 {
+    color: var(--firstColor);
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+#admin-section p {
+    color: var(--secondColor);
+    font-size: 23px;
+}
+
+#break-line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--firstColor);
+}
+
+#form-sec {
+    width: auto;
+}

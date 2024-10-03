@@ -1,0 +1,35 @@
+@media screen and (min-width: 996px) {
+    #nav-sec {
+        width: 25%;
+        height: 100vh;
+        background-color: var(--firstColor);
+    }
+}
+
+#nav-sec {
+    background-color: var(--firstColor);
+}
+
+#principal-ul #logo-item {
+    background-color: var(--secondColor);
+}
+
+#principal-ul {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#principal-ul li {
+    background-color: var(--firstColorDark);
+    border-radius: 50px;
+}
+
+#principal-ul li:hover {
+    border: 3px solid var(--secondColor);
+}
+
+#principal-ul li a {
+    color: var(--secondColor);
+    text-align: start;
+}

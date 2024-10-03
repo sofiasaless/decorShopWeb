@@ -1,0 +1,26 @@
+#post-form {
+    background-color: var(--firstColor);
+    border: 3px solid var(--secondColor);
+    padding: 15px;
+    color: var(--secondColor);
+}
+
+#btn-group button {
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#cadastrar {
+    color: var(--firstColor);
+    background-color: var(--secondColor);
+    border-bottom: 4px solid var(--secondColorLight);
+
+}
+#cadastrar:hover{
+    background-color: var(--secondColorLight);
+}
+#limpar {
+    border: 2px solid var(--secondColor);
+    border-bottom: 4px solid var(--secondColorLight);
+}
