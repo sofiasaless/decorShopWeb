@@ -33,10 +33,10 @@ export default function AdminHeader () {
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <Link to={"/admin/editarProdutos"} className="nav-link" href="#">
                                     <i class="bi bi-pencil-fill m-3"></i>
                                     Visualizar e editar
-                                </a>
+                                </Link>
                             </li>
                             
                             <li className="nav-item">

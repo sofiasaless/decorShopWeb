@@ -6,6 +6,7 @@ import ProtectedPage from "./pages/ProtectedPage";
 import Administrator from "./pages/Administrator";
 // import AdminBuild from "./pages/AdminBuild";
 import NewProducts from "./pages/NewProducts";
+import EditProducts from "./pages/EditProducts";
 
 export default function AppRoutes () {
     return (
@@ -35,6 +36,17 @@ export default function AppRoutes () {
                 >
 
                 </Route>
+                <Route
+                    path="/admin/editarProdutos"
+                    element= {
+                        <ProtectedPage>
+                            <Administrator>
+                                <EditProducts/>
+                            </Administrator>
+                        </ProtectedPage>
+                    }
+                ></Route>
+
 
                 {/* <Route path="/page" element = {<AdminBuild/>}></Route> */}
 
