@@ -23,11 +23,10 @@ h2 {
 
 #btn {
     font-family: var(--firstFont);    
-    width: 50%;
+    width: 40%;
     background-color: var(--firstColor);
     border: none;
     color: black;
-    font-weight: bold;
     font-size: 18px;
     border-bottom: 4px solid var(--firstColorDark);
 }
@@ -35,4 +34,17 @@ h2 {
 #btn:hover {
     color: black;
     background-color: var(--firstColorDark);
+}
+
+#btn-register {
+    font-family: var(--firstFont);    
+    width: 50%;
+    border: none;
+    color: var(--firstColor);
+    font-size: 18px;
+    border: 3px solid var(--firstColor);
+}
+
+#btn-register:hover {
+    border-bottom: 4px solid var(--firstColor);
 }

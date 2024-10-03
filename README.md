@@ -13,5 +13,6 @@ This web page will contain JWT (Json Web Token) for postting products service.
     * the person who anunciates the products gonna be able to do these funcionalitys easily
     * **in the "view users" in admin section, the admin can turn users into admins** 
 - [x] create the post new product page
-- [ ] create the visualizer & edit products page,
+- [x] create the visualizer & edit products page,
+    * logic still not working
 - [ ] create the register users page, with the "see profile" if user is logged in;

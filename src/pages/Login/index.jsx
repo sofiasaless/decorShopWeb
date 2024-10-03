@@ -54,7 +54,15 @@ export default function Login () {
                         <div id="emailHelp" class="form-text" style={{color:"grey"}}>Evite compartilhar sua senha.</div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary rounded-5" id="btn">entrar</button>
+                    <div className="d-flex justify-content-evenly">
+                        <button type="submit" class="fw-bold btn btn-primary rounded-5" id="btn">entrar</button>
+                        <button 
+                            type="submit" class="fw-bold btn rounded-5" id="btn-register"
+                            onClick={() => navigate('/cadastro')}
+                        >
+                            cadastro
+                        </button>
+                    </div>
                 </form>
             </div>
            </section>
