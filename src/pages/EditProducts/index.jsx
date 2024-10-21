@@ -1,29 +1,51 @@
 import './style.css'
-import prodTemplate from "../../../public/img/product-template/bem-vindosCompleto.png";
-import prodTemplate2 from "../../../public/img/product-template/calendario.png";
-import prodTemplate3 from "../../../public/img/product-template/lagarga-vogais.png";
-import prodTemplate4 from "../../../public/img/product-template/numeros.png";
-import CardProduct from '../../components/CardProduct';
 import CardEditProduct from '../../components/CardEditProduct';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function EditProducts () {
+    const [ products, setProducts ] = useState([]);
+    const [ resp, setResp ] = useState(false)
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/decor/list")
+        .then((resp) => {
+            setProducts(resp.data)
+            setResp(true)
+        })
+        .catch((err) => {
+            console.log(err)
+            setResp(false)
+        })
+    },[])
+    
     return (
         <>
-            <h3 className='text-uppercase fw-bold text-center'>Faça atualizações em seus produtos!</h3>
+            <h3 className='text-uppercase fw-bold text-center'>Modifique seus produtos como quiser!</h3>
         
             <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 mb-1 align-items-center justify-content-center">
                 
-            <CardEditProduct title={"bem-vindo"} price={"50"} img={ prodTemplate }/>
-          
-            <CardEditProduct title={"calendário"} price={"45"} img={ prodTemplate2 }/>
+                {   
+                    resp ?
+                    products.map((p) => (
+                        <>
 
-            <CardEditProduct title={"sentopéia vogais"} price={"50"} img={ prodTemplate3 } />
+                            <CardEditProduct
+                                title={p.name}
+                                price={p.price}
+                                img={p.image}
+                                product={p}
+                            />
 
-            <CardEditProduct title={"alfabeto"} price={"35"} img={ prodTemplate4 } />
-
-            <CardEditProduct title={"bem-vindo"} price={"50"} img={ prodTemplate }/>
-          
-            <CardEditProduct title={"calendário"} price={"45"} img={ prodTemplate2 }/>
+                        </>
+                    ))
+                    :
+                    <div class="text-center mt-5">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+                }
 
             </div>
 

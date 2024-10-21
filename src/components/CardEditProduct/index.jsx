@@ -1,6 +1,26 @@
+import axios from 'axios';
 import './style.css';
 
-export default function CardEditProduct( { title, price, img } ) {
+export default function CardEditProduct( { title, price, img, product } ) {
+    
+    // getting the authorites from token
+    const authAxios = axios.create( {
+        baseURL: "http://localhost:8080/decor",
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+    })
+
+    const deleteProduct = () => {
+        authAxios.delete(`/${product.id}`)
+        .then((res) => {
+            console.log('exclusão feita com sucesso: ' + res);
+        })
+        .catch((err) => {
+            console.log('erro ao excluir produto: ' + err);
+        })
+    }
+
     return (
         <>
             <div className="col" style={{maxWidth: "250px"}}>
@@ -13,11 +33,26 @@ export default function CardEditProduct( { title, price, img } ) {
                         </p>
 
                         <div id='btn-section' className='d-flex flex-row justify-content-evenly'>
-                            <button id='bt-edit' className="btn btn-dark rounded-4 fw-bold">
+                            <button 
+                                id='bt-edit' 
+                                className="btn btn-dark rounded-4 fw-bold"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"
+                            >
                                 <i class="bi bi-pencil-square m-3"></i>
                                 <span className='m-2'>Editar</span>
                             </button>
-                            <button id='bt-trash' className="btn btn-danger rounded-4 fw-bold">
+                            <button 
+                                id='bt-trash' 
+                                className="btn btn-danger rounded-4 fw-bold" 
+
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    console.log(product.id)
+                                    console.log(product.name)
+
+                                    deleteProduct();
+                                }}
+                            >
                                 <i class="bi bi-trash3"></i>
                             </button>
                         </div>
