@@ -2,7 +2,6 @@ import './style.css'
 import CardEditProduct from '../../components/CardEditProduct';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import UpdateModal from '../../components/UpdateModal';
 
 export default function EditProducts () {
     const [ products, setProducts ] = useState([]);
