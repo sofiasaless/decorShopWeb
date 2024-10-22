@@ -1,8 +1,15 @@
 import axios from 'axios';
 import './style.css';
+import { useState } from 'react';
 
-export default function CardEditProduct( { title, price, img, product } ) {
+export default function CardEditProduct( { title, img, product } ) {
     
+    // states
+    const [name, setName] = useState(product.name)
+    const [description, setDescription] = useState(product.description)
+    const [price, setPrice] = useState(product.price)
+    const [stock, setStock] = useState(product.stock)
+    const [image, setImage] = useState(product.image)
 
     // getting the authorities from token
     const authAxios = axios.create( {
@@ -12,6 +19,7 @@ export default function CardEditProduct( { title, price, img, product } ) {
         }
     })
 
+    // delete method with axios
     const deleteProduct = () => {
         authAxios.delete(`/${product.id}`)
         .then((res) => {
@@ -23,6 +31,29 @@ export default function CardEditProduct( { title, price, img, product } ) {
         })
     }
 
+    // update method with axios
+    const updateProduct = () => {
+        const productData = {
+            id: product.id,
+            name: name,
+            description: description,
+            price: price,
+            stock: stock,
+            image: image
+        }
+
+        authAxios.put('/update', productData)
+        .then((resp) => {
+            console.log('atualização feita com sucesso, ' + resp)
+            handleReload()
+        })
+        .catch((err) => {
+            console.log('erro ao atualizar o produto: ' + err)
+        })
+        
+    }
+
+    // reloding page function
     const handleReload = () => {
         window.location.reload();
     };
@@ -35,7 +66,7 @@ export default function CardEditProduct( { title, price, img, product } ) {
                     <div className="card-body text-center p-3">
                         <h5 className="card-title mb-0 text-uppercase fw-bold">{ title }</h5>
                         <p className="card-text">
-                            R${ price }
+                            R${ product.price }
                         </p>
 
                         <div id='btn-section' className='d-flex flex-row justify-content-evenly'>
@@ -72,12 +103,50 @@ export default function CardEditProduct( { title, price, img, product } ) {
                             <h5 className="modal-title text-uppercase fw-bold" id="editModalLabel">Editar produto</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+
                         <div className="modal-body">
-                            {product.id} - {product.name}
+                            <form>
+                                <div class="mb-2">
+                                    <label for="exampleInputName" class="ms-1 form-label text-uppercase fw-bold">Nome do produto</label>
+                                    <input value={name} onChange={(e) => setName(e.target.value)} required class="form-control" type="text"/>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label for="exampleFormControlTextarea1" class="ms-1 form-label text-uppercase fw-bold">Descrição</label>
+                                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} required class="form-control" id="exampleFormControlTextarea1" rows="3"/>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <label for="price" class="ms-1 form-label text-uppercase fw-bold">Preço</label>
+                                        <input value={price} onChange={(e) => setPrice(e.target.value)} required id='price' type="number" class="form-control" min={0}/>
+                                    </div>
+                                    <div class="col">
+                                        <label for="stock" class="ms-1 form-label text-uppercase fw-bold">Estoque</label>
+                                        <input value={stock} onChange={(e) => setStock(e.target.value)} required id='stock' type="number" class="form-control" min={0}/>
+                                    </div>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label for="image" class="ms-1 form-label text-uppercase fw-bold">Imagem</label>
+                                    <input value={image} onChange={(e) => setImage(e.target.value)} required id='image' type="url" class="form-control" min={0}/>
+                                </div>
+                            </form>
                         </div>
+
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" id='save-btn' className="btn">Salvar</button>
+                            <button 
+                                type="button" 
+                                id='save-btn' 
+                                className="btn"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    updateProduct();
+                                }}
+                            >
+                                Salvar
+                            </button>
                         </div>
                     </div>
                 </div>
