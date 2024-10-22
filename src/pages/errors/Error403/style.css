@@ -1,0 +1,22 @@
+#warn-title {
+    font-size: 50px;
+}
+
+#warn-message {
+    font-family: var(--firstFont);
+    font-size: 20px;
+}
+
+#goHome-btn {
+    width: 100%;
+    font-family: var(--firstFont);
+    border: none;
+    background-color: var(--secondColor);
+    color: var(--firstColor);
+    font-size: 18px;
+    border: 3px solid var(--firstColor);
+}
+
+#goHome-btn:hover {
+    border-bottom: 5px solid var(--firstColor);
+}
