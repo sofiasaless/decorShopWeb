@@ -72,7 +72,7 @@ h1 {
     background-color: var(--thirdColor);
     padding: 5%;
     width: 100%;
-    height: calc(100vh + auto);
+    height: auto;
 }
 
 .breaker_text {
