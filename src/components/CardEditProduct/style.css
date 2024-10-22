@@ -13,4 +13,6 @@ h5 {
 
 #save-btn {
     background-color: var(--firstColor);
+    color: white;
+    flex: 0.3;
 }
