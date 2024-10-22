@@ -6,3 +6,11 @@ i {
     text-transform: none;
     font-style: normal;
 }
+
+h5 {
+    color: var(--firstColor);
+}
+
+#save-btn {
+    background-color: var(--firstColor);
+}

@@ -23,7 +23,7 @@ export default function EditProducts () {
         <>
             <h3 className='text-uppercase fw-bold text-center'>Modifique seus produtos como quiser!</h3>
         
-            <div id='grid-container' class="row row-cols-2 row-cols-md-4 g-3 mt-1 mb-1 align-items-center justify-content-center">
+            <div id='grid-container' className="row row-cols-2 row-cols-md-4 g-3 mt-1 mb-1 align-items-center justify-content-center">
                 
                 {   
                     resp ?
@@ -31,6 +31,7 @@ export default function EditProducts () {
                         <>
 
                             <CardEditProduct
+                                key={p.id}
                                 title={p.name}
                                 price={p.price}
                                 img={p.image}
