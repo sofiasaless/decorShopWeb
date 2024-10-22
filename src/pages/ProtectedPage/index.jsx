@@ -22,7 +22,7 @@ export default function ProtectedPage( { children } ) {
     })
     .catch(() => {
         console.log("nao autorizado")
-        return navigate('/');
+        return navigate('/error403');
     })
     
 
