@@ -9,6 +9,8 @@ import NewProducts from "./pages/NewProducts";
 import EditProducts from "./pages/EditProducts";
 import Usuarios from "./pages/Usuarios";
 import Register from "./pages/Register";
+import Error403 from "./pages/errors/Error403";
+import ProductDetails from "./pages/ProductDetails";
 
 export default function AppRoutes () {
     return (
@@ -61,7 +63,9 @@ export default function AppRoutes () {
 
 
                 {/* <Route path="/page" element = {<AdminBuild/>}></Route> */}
+                <Route path="/error403" element = { <Error403/> } ></Route>
 
+                <Route path="/visualizar/:id" element = { <ProductDetails/> } ></Route>
             </Routes>
         </BrowserRouter>
     );

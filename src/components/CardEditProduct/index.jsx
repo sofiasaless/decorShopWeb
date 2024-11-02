@@ -58,6 +58,15 @@ export default function CardEditProduct( { title, img, product } ) {
         window.location.reload();
     };
 
+    // go back to product attributes if press close button
+    const goBack = () => {
+        setName(product.name)
+        setDescription(product.description)
+        setPrice(product.price)
+        setStock(product.stock)
+        setImage(product.image)
+    }
+
     return (
         <>
             <div className="col" style={{maxWidth: "250px"}}>
@@ -135,7 +144,11 @@ export default function CardEditProduct( { title, img, product } ) {
                         </div>
 
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
+                                onClick={goBack}
+                            >
+                                Fechar
+                            </button>
                             <button 
                                 type="button" 
                                 id='save-btn' 
