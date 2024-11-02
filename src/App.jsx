@@ -20,6 +20,7 @@ function App() {
     .then((resp) => {
       for (let i = 0; i < 4; i++) {
         productData[i] = resp.data[i];
+        console.log(resp.data[i])
       }
       setData(productData);
       setResp(true)
@@ -28,7 +29,7 @@ function App() {
       console.log('erro: ' + err)
       setResp(false)
     })
-  })
+  },[])
 
 
   return (
@@ -75,9 +76,8 @@ function App() {
             resp ?
             data.map((prod) => (
               <CardProduct 
-                title={prod.name}
-                price={prod.price}
-                img={prod.image}
+                key={prod.id}
+                product={prod}
               />
             ))
             :

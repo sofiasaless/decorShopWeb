@@ -50,9 +50,8 @@ export default function Products () {
                         products.map((p) => (
                             <>
                                 <CardProduct 
-                                    title={p.name}
-                                    price={p.price}
-                                    img={p.image}
+                                    key={p.id}
+                                    product={p}
                                 />
                             </>
                         ))
